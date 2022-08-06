@@ -30,7 +30,7 @@ export default function MovieInformation({ movieResults }: Props) {
 }
 
 export const getStaticPaths: GetStaticPaths = async () => {
-  const res = await fetch("http://localhost:3000/api/movies");
+  const res = await fetch("https://movies-api-wine.vercel.app/api/movie");
   const movieData = await res.json();
 
   const paths = movieData?.map((movie: MovieListType) => ({
@@ -51,7 +51,7 @@ export const getStaticProps: GetStaticProps = async (context) => {
   const { id } = context.params as IParams;
 
   const movieResults = await fetch(
-    `http://localhost:3000/api/movies/${id}`
+    `https://movies-api-wine.vercel.app/api/movies/${id}`
   ).then((res) => res.json());
 
   return {

@@ -35,9 +35,9 @@ export default function Home({ movieResults }: Props) {
 }
 
 export const getServerSideProps: GetServerSideProps = async () => {
-  const movieResults = await fetch("http://localhost:3000/api/movies").then(
-    (res) => res.json()
-  );
+  const movieResults = await fetch(
+    "https://movies-api-wine.vercel.app/api/movie"
+  ).then((res) => res.json());
 
   return {
     props: {
