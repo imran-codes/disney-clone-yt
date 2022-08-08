@@ -3,7 +3,7 @@
   "scripts": {
     "dev": "next",
     "build": "next build",
-    "start": "yarn dev"
+    "start": "next start"
   },
   "dependencies": {
     "next": "latest",
