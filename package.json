@@ -2,8 +2,8 @@
   "private": true,
   "scripts": {
     "dev": "next",
-    "build": "next build",
-    "start": "next start"
+    "build": "yarn run build",
+    "start": "yarn dev"
   },
   "dependencies": {
     "next": "latest",
